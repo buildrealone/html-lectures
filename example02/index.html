@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML/CSS 강의 - 기초 모듈: "Table 레이아웃 숙제 : Cart 페이지 만들기"</title>
+    <meta name="description" content="example02 - Table 레이아웃 숙제 : Cart 페이지 만들기" />
+    <style>
+
+    * {
+        font-family: 'arial';
+        box-sizing: border-box;
+    }
+
+    /* 간혹 border-collapse 속성을 table태그에 적용하면 border-radius가 안먹는 경우가 있습니다. */
+    /* 그럴 때 사용할만한 방법들을 소개해드립니다. */
+    table {
+        border-collapse: collapse;
+        border-radius : 7px;
+        border-style : hidden;
+        box-shadow : 0 0 0 1px #666;
+    }
+    /* border-radius END */
+
+    td, th {
+        border: 1px solid black;
+    }
+    tbody tr:nth-child(1) td {
+        text-align: center;
+    }
+    .cart-background {
+        width: 100%;
+        background-color: #c2d3de;
+        padding: 30px;
+    }
+    .cart-table {
+        width: 100%;
+        max-width: 700px;
+        margin: auto;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    /* 
+    <주의사항> ".cart-table td, th" === ".cart-table td" + "모든 th"  
+    */
+    .cart-table td, .cart-table th { 
+        padding: 15px;
+        border-bottom: 1px solid #c2d3de;
+    }
+
+    /* ":nth-child(2)" === "2번째 직계 작식 태그"를 의미 */
+    .cart-table th:nth-child(2) {
+        width: 400px;
+    }
+    
+    .cell-long {
+        /* td 태그의 "width" 속성의 의미: "td에게는 최대한 이만큼 차지해조세요~"라는 뜻으로 "max-width"와 매우 유사함. */
+        width: 700px; 
+        text-align: center;
+    }
+    
+    </style>
+    </head>
+<body>
+    <div class="cart-background">
+        
+        <h3>Your Shopping Cart</h3>
+        
+        <table class="cart-table">
+            <!-- 제목행 -->
+            <thead>
+                <tr>
+                    <td>IMAGE</td>
+                    <td class="cell-long">ITEM</td>
+                    <td>AMOUNT</td>
+                    <td>PRICE</td>
+                    <td>TOTAL</td>
+                </tr>
+            </thead>
+
+            <!-- 일반행 -->
+            <tbody>
+                <tr>
+                    <td><img src="./images/item1.png" width="50px" /></td>
+                    <td>패션 신발</td>
+                    <td>1</td>
+                    <td>7000</td>
+                    <td>7000</td>
+                </tr>
+                <tr>
+                    <!-- colspan="5": "이 <td>는 옆의 셀 5개를 합쳐주세요~"라는 의미 -->
+                    <td colspan="5" style="text-align: right;">총 가격: 7000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
