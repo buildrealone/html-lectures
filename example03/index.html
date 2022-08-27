@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML/CSS 강의 - 중급 모듈: "레이아웃 만들기 3: 편리한 Flexbox"</title>
+    <meta name="description" content="example03 - 레이아웃 만들기 3: 편리한 Flexbox" />
+    <style>
+        .nav-container {
+            display: flex;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+        .nav-item {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-container">
+        <div class="nav-item">ShooShop</div>
+        <div style="flex-grow: 1;"></div>
+        <div class="nav-item">Products</div>
+        <div class="nav-item">Services</div>
+    </nav>
+</body>
+</html>
