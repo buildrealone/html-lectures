@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML/CSS 강의 - 중급 모듈: "TailwindCSS Get Started with CDN"</title>
+    <meta name="description" content="example05 - TailwindCSS Get Started with CDN" />
+    <link href="/dist/output.css" rel="stylesheet">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+</head>
+<body>
+    <!-- "grid-cols-1" === "grid-template-columns: repeat(1, minmax(0, 1fr));" -->
+    <!-- "grid-cols-3" === "grid-template-columns: repeat(3, minmax(0, 1fr));" -->
+
+    <!-- Apply TailwindCSS to child elements: 모든 직계 자식에 적용   [&>*] OR [&>p] 등등 -->
+    <!-- Apply TailwindCSS to child elements (hover): 모든 직계 자식이 hover 되었을 때 적용 [&>*:hover] -->
+
+    <!-- [&>*]:bg-blue-500 -->
+    <!-- [&>*:hover]:text-blue-500 -->
+    <div class="grid grid-cols-4 gap-2 [&>*]:bg-blue-500 [&>*]:text-white">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+        <div>04</div>
+        <div>05</div>
+        <div>06</div>
+        <div>07</div>
+        <div>08</div>
+    </div>
+    <div class="mt-5 grid grid-cols-6 gap-4 [&>*]:bg-red-500 [&>*]:text-white">
+        <div>09</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+        <div>17</div>
+        <div>18</div>
+        <div>19</div>
+        <div>20</div>
+    </div>
+</body>
+</html>
